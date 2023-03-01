@@ -211,10 +211,8 @@
           null
         ]
       },
-      "/Users/mackenzieleng/Desktop/turing_work/4mod/projects/tea_time/app/models/subscription.rb": {
+      "/Users/mackenzieleng/Desktop/turing_work/4mod/projects/tea_time/app/models/customer.rb": {
         "lines": [
-          1,
-          1,
           1,
           1,
           null
@@ -222,6 +220,28 @@
       },
       "/Users/mackenzieleng/Desktop/turing_work/4mod/projects/tea_time/app/models/application_record.rb": {
         "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/mackenzieleng/Desktop/turing_work/4mod/projects/tea_time/spec/models/subscription_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          2,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/mackenzieleng/Desktop/turing_work/4mod/projects/tea_time/app/models/subscription.rb": {
+        "lines": [
+          1,
+          1,
           1,
           1,
           null
@@ -249,7 +269,22 @@
       },
       "/Users/mackenzieleng/Desktop/turing_work/4mod/projects/tea_time/spec/models/tea_subscription_spec.rb": {
         "lines": [
-
+          1,
+          null,
+          1,
+          1,
+          2,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/mackenzieleng/Desktop/turing_work/4mod/projects/tea_time/app/models/tea_subscription.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
         ]
       },
       "/Users/mackenzieleng/Desktop/turing_work/4mod/projects/tea_time/spec/requests/api/v1/tea_subscriptions/create_spec.rb": {
@@ -269,22 +304,8 @@
           null,
           null
         ]
-      },
-      "/Users/mackenzieleng/Desktop/turing_work/4mod/projects/tea_time/app/models/customer.rb": {
-        "lines": [
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/mackenzieleng/Desktop/turing_work/4mod/projects/tea_time/app/models/tea_subscription.rb": {
-        "lines": [
-          1,
-          null,
-          null
-        ]
       }
     },
-    "timestamp": 1677710602
+    "timestamp": 1677711826
   }
 }
