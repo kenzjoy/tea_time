@@ -214,7 +214,8 @@
       "/Users/mackenzieleng/Desktop/turing_work/4mod/projects/tea_time/app/models/tea.rb": {
         "lines": [
           1,
-          null,
+          1,
+          1,
           null
         ]
       },
@@ -247,8 +248,13 @@
           null,
           null
         ]
+      },
+      "/Users/mackenzieleng/Desktop/turing_work/4mod/projects/tea_time/app/models/tea_subscription.rb": {
+        "lines": [
+
+        ]
       }
     },
-    "timestamp": 1677702994
+    "timestamp": 1677703189
   }
 }
