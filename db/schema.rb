@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_01_230759) do
+ActiveRecord::Schema.define(version: 2023_03_02_010830) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "customer_subscriptions", force: :cascade do |t|
+    t.bigint "customer_id"
+    t.bigint "subscription_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["customer_id"], name: "index_customer_subscriptions_on_customer_id"
+    t.index ["subscription_id"], name: "index_customer_subscriptions_on_subscription_id"
+  end
 
   create_table "customers", force: :cascade do |t|
     t.string "first_name"
@@ -31,17 +40,8 @@ ActiveRecord::Schema.define(version: 2023_03_01_230759) do
     t.integer "frequency", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "customer_id"
-    t.index ["customer_id"], name: "index_subscriptions_on_customer_id"
-  end
-
-  create_table "tea_subscriptions", force: :cascade do |t|
     t.bigint "tea_id"
-    t.bigint "subscription_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["subscription_id"], name: "index_tea_subscriptions_on_subscription_id"
-    t.index ["tea_id"], name: "index_tea_subscriptions_on_tea_id"
+    t.index ["tea_id"], name: "index_subscriptions_on_tea_id"
   end
 
   create_table "teas", force: :cascade do |t|
@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 2023_03_01_230759) do
     t.string "image"
   end
 
-  add_foreign_key "subscriptions", "customers"
-  add_foreign_key "tea_subscriptions", "subscriptions"
-  add_foreign_key "tea_subscriptions", "teas"
+  add_foreign_key "customer_subscriptions", "subscriptions"
+  add_foreign_key "customer_subscriptions", "teas", column: "customer_id"
+  add_foreign_key "subscriptions", "customers", column: "tea_id"
 end

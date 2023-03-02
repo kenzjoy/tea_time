@@ -221,6 +221,7 @@
         "lines": [
           1,
           1,
+          1,
           null,
           1,
           1,
@@ -231,6 +232,34 @@
       },
       "/Users/mackenzieleng/Desktop/turing_work/4mod/projects/tea_time/app/models/application_record.rb": {
         "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/mackenzieleng/Desktop/turing_work/4mod/projects/tea_time/spec/models/customer_subscription_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          2,
+          null,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/mackenzieleng/Desktop/turing_work/4mod/projects/tea_time/app/models/customer_subscription.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
           1,
           1,
           null
@@ -282,7 +311,6 @@
           1,
           1,
           2,
-          2,
           null,
           null,
           1,
@@ -299,39 +327,10 @@
         "lines": [
           1,
           1,
-          1,
           null,
           1,
           1,
           1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/mackenzieleng/Desktop/turing_work/4mod/projects/tea_time/spec/models/tea_subscription_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          2,
-          2,
-          null,
-          null,
-          1,
-          2,
-          2,
-          null,
-          null
-        ]
-      },
-      "/Users/mackenzieleng/Desktop/turing_work/4mod/projects/tea_time/app/models/tea_subscription.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
           1,
           1,
           null
@@ -346,20 +345,7 @@
           1,
           1,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
+          0,
           null,
           null,
           null,
@@ -367,13 +353,12 @@
           null,
           null,
           null,
-          null,
-          1,
-          1,
-          null,
+          0,
+          0,
           null,
           null,
-          1,
+          null,
+          null,
           0,
           null,
           0,
@@ -395,6 +380,6 @@
         ]
       }
     },
-    "timestamp": 1677716841
+    "timestamp": 1677719686
   }
 }
