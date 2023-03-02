@@ -13,7 +13,7 @@
 - [Project Prompt](https://mod4.turing.edu/projects/take_home/take_home_be)
 
 ## DB Schema
-<img width="350" alt="Schema" src="https://i.ibb.co/W0CPhmc/Screenshot-2023-03-01-at-12-12-43-PM.png">
+<img width="350" alt="Schema" src="https://i.ibb.co/qmqWPSw/Screenshot-2023-03-01-at-5-36-57-PM.png">
 
 ## Built With
 - Rails 5.2.8
