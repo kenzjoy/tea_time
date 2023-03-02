@@ -212,6 +212,7 @@
           1,
           1,
           1,
+          1,
           null,
           null,
           null
@@ -523,6 +524,53 @@
           null
         ]
       },
+      "/Users/mackenzieleng/Desktop/turing_work/4mod/projects/tea_time/spec/requests/api/v1/customers/show_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/mackenzieleng/Desktop/turing_work/4mod/projects/tea_time/app/controllers/api/v1/customer_subscriptions_controller.rb": {
         "lines": [
           1,
@@ -543,8 +591,35 @@
           1,
           null
         ]
+      },
+      "/Users/mackenzieleng/Desktop/turing_work/4mod/projects/tea_time/app/controllers/api/v1/customers_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          null,
+          1,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/mackenzieleng/Desktop/turing_work/4mod/projects/tea_time/app/serializers/customers_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1677777449
+    "timestamp": 1677783518
   }
 }

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
+      get '/customer', to: 'customers#show'
       post '/customer-subscriptions', to: 'customer_subscriptions#create'
     end
   end
