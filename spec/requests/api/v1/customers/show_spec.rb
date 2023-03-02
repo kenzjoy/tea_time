@@ -40,4 +40,19 @@ RSpec.describe 'GET /customer' do
       expect(parsed[:data][:attributes][:subscriptions]).to be_an(Array)
     end
   end
+
+  describe 'when there are no records' do
+    it 'returns an error' do
+      get '/api/v1/customer?id=1001'
+
+      expect(response).to_not be_successful
+      expect(response).to have_http_status(404)
+      
+      parsed = JSON.parse(response.body, symbolize_names: true)
+      
+      expect(parsed).to be_a(Hash)
+      expect(parsed).to have_key(:error)
+      expect(parsed[:error]).to eq('No Customer Found')
+    end
+  end
 end
