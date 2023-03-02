@@ -38,7 +38,15 @@ RSpec.describe 'POST /customer-subscriptions' do
       post '/api/v1/customer-subscriptions', headers: headers, params: JSON.generate(body)
 
       expect(response).to be_successful
-      expect(response.status).to eq(204)
+      expect(response.status).to eq(200)
+
+      parsed = JSON.parse(response.body, symbolize_names: true)
+
+      expect(parsed).to be_a(Hash)
+      expect(parsed).to have_key(:success)
+      expect(parsed[:success]).to eq('Subscription Added')
+
+      expect(kenz.subscriptions.count).to eq(1)
     end
   end
 end
