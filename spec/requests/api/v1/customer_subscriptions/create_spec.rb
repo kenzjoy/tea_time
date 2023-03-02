@@ -140,4 +140,35 @@ RSpec.describe 'POST /customer-subscriptions' do
       expect(kenz.subscriptions.count).to eq(1)
     end
   end
+
+  describe 'when the subscription_id is not valid' do
+    it 'returns an error message' do
+      kenz = Customer.create!(
+        id: 1,
+        first_name: 'Kenz',
+        last_name: 'Leng',
+        email: 'kenz@ilovetea.com',
+        address: '318 E 3rd Ave Durango, CO 81301'
+      )
+
+      headers = { "Content-Type": "application/json", Accept: "application/json" }
+      body = ( {
+        "customer_id": 1,
+        "subscription_id": nil
+      } )
+
+      post '/api/v1/customer-subscriptions', headers: headers, params: JSON.generate(body)
+
+      expect(response).to be_successful
+      expect(response.status).to eq(200)
+        
+      parsed = JSON.parse(response.body, symbolize_names: true)
+
+      expect(parsed).to be_a(Hash)
+      expect(parsed).to have_key(:error)
+      expect(parsed[:error]).to eq('Subscription Not Added')
+
+      expect(kenz.subscriptions.count).to eq(0)
+    end
+  end
 end
