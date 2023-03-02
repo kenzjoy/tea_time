@@ -18,7 +18,7 @@ RSpec.describe 'POST /tea-subscriptions' do
         "tea_id": 5,
         "subscription_id": 1
       } )
-require 'pry'; binding.pry
+
       expect(customer.subscriptions.count).to eq(0)
 
       post '/api/v1/tea-subscriptions', headers: headers, params: JSON.generate(body)
