@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe 'POST /tea-subscriptions' do
-  describe 'when tea_id & subscription_id are valid' do
+RSpec.describe 'POST /customer-subscriptions' do
+  describe 'when customer_id & subscription_id are valid' do
     it 'adds a tea subscription to customers list of subscriptions' do 
       kenz = Customer.create!(
         id: 1,
@@ -9,14 +9,6 @@ RSpec.describe 'POST /tea-subscriptions' do
         last_name: 'Leng',
         email: 'kenz@ilovetea.com',
         address: '318 E 3rd Ave Durango, CO 81301'
-      )
-      subscription_1 = Subscription.create!(
-        id: 1,
-        tea_id: tea_1.id,
-        title: 'Orange Clove Tea',
-        price: 7.99,
-        status: 0,
-        frequency: 0
       )
       tea_1 = Tea.create!(
         id: 5,
@@ -26,19 +18,27 @@ RSpec.describe 'POST /tea-subscriptions' do
         brew_time: '7 minutes',
         image: 'https://yogiproducts.com/wp-content/uploads/2019/10/YT-US-OrangeClove-CAR-C23-202446-3DFront-WithGlow-300DPI-PNG.png'
       )
+      subscription_1 = Subscription.create!(
+        id: 1,
+        tea_id: 5,
+        title: 'Orange Clove Tea',
+        price: 7.99,
+        status: 0,
+        frequency: 0
+      )
       
       headers = { "Content-Type": "application/json", Accept: "application/json" }
       body = ( {
         "customer_id": 1,
         "subscription_id": 1
       } )
-require 'pry'; binding.pry
+
       expect(kenz.subscriptions.count).to eq(0)
 
-      post '/api/v1/tea-subscriptions', headers: headers, params: JSON.generate(body)
+      post '/api/v1/customer-subscriptions', headers: headers, params: JSON.generate(body)
 
       expect(response).to be_successful
-      expect(response.status).to eq(200)
+      expect(response.status).to eq(204)
     end
   end
 end

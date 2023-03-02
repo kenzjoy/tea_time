@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_02_010830) do
+ActiveRecord::Schema.define(version: 2023_03_02_014330) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 2023_03_02_010830) do
     t.string "image"
   end
 
+  add_foreign_key "customer_subscriptions", "customers"
   add_foreign_key "customer_subscriptions", "subscriptions"
-  add_foreign_key "customer_subscriptions", "teas", column: "customer_id"
-  add_foreign_key "subscriptions", "customers", column: "tea_id"
+  add_foreign_key "subscriptions", "teas"
 end

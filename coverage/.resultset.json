@@ -195,7 +195,7 @@
           null,
           null,
           1,
-          1,
+          2,
           null,
           null,
           null,
@@ -336,7 +336,7 @@
           null
         ]
       },
-      "/Users/mackenzieleng/Desktop/turing_work/4mod/projects/tea_time/spec/requests/api/v1/tea_subscriptions/create_spec.rb": {
+      "/Users/mackenzieleng/Desktop/turing_work/4mod/projects/tea_time/spec/requests/api/v1/customer_subscriptions/create_spec.rb": {
         "lines": [
           1,
           null,
@@ -345,7 +345,12 @@
           1,
           1,
           null,
-          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
           null,
           null,
           null,
@@ -353,24 +358,33 @@
           null,
           null,
           null,
-          0,
-          0,
+          1,
           null,
           null,
           null,
           null,
-          0,
           null,
-          0,
           null,
-          0,
-          0,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
           null,
           null,
           null
         ]
       },
-      "/Users/mackenzieleng/Desktop/turing_work/4mod/projects/tea_time/spec/requests/api/v1/tea_subscriptions/destroy_spec.rb": {
+      "/Users/mackenzieleng/Desktop/turing_work/4mod/projects/tea_time/spec/requests/api/v1/customer_subscriptions/destroy_spec.rb": {
         "lines": [
           1,
           null,
@@ -378,8 +392,23 @@
           null,
           null
         ]
+      },
+      "/Users/mackenzieleng/Desktop/turing_work/4mod/projects/tea_time/app/controllers/api/v1/customer_subscriptions_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/mackenzieleng/Desktop/turing_work/4mod/projects/tea_time/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1677719686
+    "timestamp": 1677721988
   }
 }

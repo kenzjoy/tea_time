@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      post '/tea-subscriptions', to: 'tea_subscriptions#create'
+      post '/customer-subscriptions', to: 'customer_subscriptions#create'
     end
   end
 end
