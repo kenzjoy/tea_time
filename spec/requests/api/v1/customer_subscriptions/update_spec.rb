@@ -36,6 +36,12 @@ RSpec.describe 'PATCH /tea-subscriptions' do
       post '/api/v1/customer-subscriptions', headers: headers, params: JSON.generate(body)
 
       expect(kenz.subscriptions.first.status).to eq('active')
+
+      update_params = {
+        status: 1
+      }
+
+      patch '/api/v1/customer-subscriptions', headers: headers, params: JSON.generate( { subscription_1: update_params } )
     end
   end
 
