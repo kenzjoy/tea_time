@@ -213,6 +213,7 @@
           1,
           1,
           1,
+          1,
           null,
           null,
           null
@@ -256,6 +257,9 @@
           1,
           1,
           null,
+          1,
+          null,
+          1,
           1,
           null
         ]
@@ -509,11 +513,66 @@
           null
         ]
       },
-      "/Users/mackenzieleng/Desktop/turing_work/4mod/projects/tea_time/spec/requests/api/v1/customer_subscriptions/destroy_spec.rb": {
+      "/Users/mackenzieleng/Desktop/turing_work/4mod/projects/tea_time/spec/requests/api/v1/customer_subscriptions/update_spec.rb": {
         "lines": [
           1,
           null,
           1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
           null,
           null
         ]
@@ -558,8 +617,8 @@
           1,
           1,
           1,
-          1,
-          1,
+          null,
+          null,
           null,
           null,
           null,
@@ -600,19 +659,49 @@
           1,
           null,
           1,
-          5,
-          5,
-          null,
-          2,
+          6,
+          6,
+          3,
           null,
           3,
           null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
           null,
           null
         ]
       },
       "/Users/mackenzieleng/Desktop/turing_work/4mod/projects/tea_time/app/controllers/application_controller.rb": {
         "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/mackenzieleng/Desktop/turing_work/4mod/projects/tea_time/app/serializers/customer_subscriptions_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null,
           1,
           null
         ]
@@ -645,6 +734,6 @@
         ]
       }
     },
-    "timestamp": 1677817465
+    "timestamp": 1677879553
   }
 }
