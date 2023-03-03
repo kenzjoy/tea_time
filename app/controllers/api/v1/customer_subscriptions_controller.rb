@@ -9,4 +9,8 @@ class Api::V1::CustomerSubscriptionsController < ApplicationController
       render json: { 'error': 'Subscription Not Added' }, status: 200
     end
   end
+
+  def update
+    
+  end
 end
