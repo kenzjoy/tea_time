@@ -33,15 +33,26 @@ RSpec.describe 'PATCH /tea-subscriptions' do
         "subscription_id": 1
       } )
 
+      expect(kenz.customer_subscriptions.count).to eq(0)
+      
       post '/api/v1/customer-subscriptions', headers: headers, params: JSON.generate(body)
+      
+      expect(kenz.customer_subscriptions.count).to eq(1)
 
-      expect(kenz.subscriptions.first.status).to eq('active')
+      expect(kenz.customer_subscriptions.last.status).to eq('active')
 
       update_params = {
-        status: 1
+        "customer_id": 1,
+        "subscription_id": 1,
+        "status": "cancelled"
       }
 
-      patch '/api/v1/customer-subscriptions', headers: headers, params: JSON.generate( { subscription_1: update_params } )
+      patch '/api/v1/customer-subscriptions', params: update_params
+      
+      expect(response).to be_successful
+      parsed = JSON.parse(response.body, symbolize_names: true)
+
+      expect(kenz.customer_subscriptions.last.status).to eq('cancelled')
     end
   end
 

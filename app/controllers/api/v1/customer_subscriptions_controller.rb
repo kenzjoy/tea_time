@@ -5,25 +5,27 @@ class Api::V1::CustomerSubscriptionsController < ApplicationController
     if customer_subscription.save
       render json: { 'success': 'Subscription Added' }, status: 200
     else
-      render json: { 'error': 'Subscription Not Added' }, status: 200
+      render json: { 'error': 'Subscription Not Added' }, status: 400
     end
   end
 
   def update
-    if CustomerSubscription.exists?(params[:id])
-      customer_subscription = CustomerSubscription.find(params[:id])
-      if customer_subscription.update(cust_sub_params)
-        customer_subscription.save
-        render json: CustomerSubscriptionsSerializer.new(customer_subscription)
-      end
-    else
-      render json: { 'error': 'Subscription Not Found' }, status: 404
+    # cust_sub_id = params[:id]
+    # if cust_sub_id.present?
+    #   customer_subscription = CustomerSubscription.find_by(id: cust_sub_id)
+    #   if !customer_subscription.nil? && customer_subscription.status == "active"
+    # end
+    customer_subscription = CustomerSubscription.find_by(customer_id: params[:customer_id], subscription_id: params[:subscription_id])
+    if customer_subscription.present?
+      customer_subscription.update(cust_subscription_params) 
+      # require 'pry'; binding.pry
+      render json: CustomerSubscriptionsSerializer.new(customer_subscription)
     end
   end
 
   private
 
-  def cust_sub_params
-    params.require(:customer_subscription).permit(:customer_id, :subscription_id, :title, :price, :status, :frequency)
+  def cust_subscription_params
+    params.permit(:customer_id, :subscription_id, :status, :frequency)
   end
 end

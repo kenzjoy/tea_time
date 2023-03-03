@@ -33,7 +33,7 @@ RSpec.describe 'POST /customer-subscriptions' do
         "subscription_id": 1
       } )
 
-      expect(kenz.subscriptions.count).to eq(0)
+      expect(kenz.customer_subscriptions.count).to eq(0)
 
       post '/api/v1/customer-subscriptions', headers: headers, params: JSON.generate(body)
 
@@ -46,7 +46,7 @@ RSpec.describe 'POST /customer-subscriptions' do
       expect(parsed).to have_key(:success)
       expect(parsed[:success]).to eq('Subscription Added')
 
-      expect(kenz.subscriptions.count).to eq(1)
+      expect(kenz.customer_subscriptions.count).to eq(1)
     end
   end
 
@@ -77,8 +77,8 @@ RSpec.describe 'POST /customer-subscriptions' do
 
       post '/api/v1/customer-subscriptions', headers: headers, params: JSON.generate(body)
       
-      expect(response).to be_successful
-      expect(response.status).to eq(200)
+      expect(response).to_not be_successful
+      expect(response.status).to eq(400)
 
       parsed = JSON.parse(response.body, symbolize_names: true)
 
@@ -120,16 +120,16 @@ RSpec.describe 'POST /customer-subscriptions' do
         "subscription_id": 1
       } )
 
-      expect(kenz.subscriptions.count).to eq(0)
+      expect(kenz.customer_subscriptions.count).to eq(0)
 
       post '/api/v1/customer-subscriptions', headers: headers, params: JSON.generate(body)
 
-      expect(kenz.subscriptions.count).to eq(1)
+      expect(kenz.customer_subscriptions.count).to eq(1)
 
       post '/api/v1/customer-subscriptions', headers: headers, params: JSON.generate(body)
 
-      expect(response).to be_successful
-      expect(response.status).to eq(200)
+      expect(response).to_not be_successful
+      expect(response.status).to eq(400)
         
       parsed = JSON.parse(response.body, symbolize_names: true)
               
@@ -137,7 +137,7 @@ RSpec.describe 'POST /customer-subscriptions' do
       expect(parsed).to have_key(:error)
       expect(parsed[:error]).to eq('Subscription Not Added')
 
-      expect(kenz.subscriptions.count).to eq(1)
+      expect(kenz.customer_subscriptions.count).to eq(1)
     end
   end
 
@@ -159,8 +159,8 @@ RSpec.describe 'POST /customer-subscriptions' do
 
       post '/api/v1/customer-subscriptions', headers: headers, params: JSON.generate(body)
 
-      expect(response).to be_successful
-      expect(response.status).to eq(200)
+      expect(response).to_not be_successful
+      expect(response.status).to eq(400)
         
       parsed = JSON.parse(response.body, symbolize_names: true)
 
@@ -168,7 +168,7 @@ RSpec.describe 'POST /customer-subscriptions' do
       expect(parsed).to have_key(:error)
       expect(parsed[:error]).to eq('Subscription Not Added')
 
-      expect(kenz.subscriptions.count).to eq(0)
+      expect(kenz.customer_subscriptions.count).to eq(0)
     end
   end
 end
